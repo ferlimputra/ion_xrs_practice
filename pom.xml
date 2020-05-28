@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.iongroup.ion20</groupId>
+    <artifactId>ion20-parent</artifactId>
+    <version>3.0.4</version>
+    <relativePath>../ion20-parent/pom.xml</relativePath>
+  </parent>
+
+  <groupId>com.xrs.sample</groupId>
+  <artifactId>xrsPractice</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>xrsPractice</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>14</maven.compiler.source>
+    <maven.compiler.target>14</maven.compiler.target>
+    <ion20.application_server.version>3.0.4</ion20.application_server.version>
+    <make-samples-assembly.phase>package</make-samples-assembly.phase>
+    <ion20.xrs_lib.version>3.0.5</ion20.xrs_lib.version>
+    <ion20.ion20-xrs_scroller.version>3.0.5</ion20.ion20-xrs_scroller.version>
+    <ion20.persistence.version>3.0.5</ion20.persistence.version>
+    <ion20.jmix_application.version>3.0.4</ion20.jmix_application.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <version>1.4.200</version>
+    </dependency>
+    <dependency>
+      <groupId>com.iontrading.xrs</groupId>
+      <artifactId>xrs_lib</artifactId>
+      <version>${ion20.xrs_lib.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.iontrading.jmix</groupId>
+      <artifactId>jmix_application</artifactId>
+      <version>${ion20.jmix_application.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.iontrading.isf</groupId>
+      <artifactId>application_server</artifactId>
+      <version>${ion20.application_server.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.iontrading.isf</groupId>
+      <artifactId>persistence_notification</artifactId>
+      <version>${ion20.persistence.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.iontrading.isf</groupId>
+      <artifactId>repository</artifactId>
+      <version>3.0.5</version>
+    </dependency>
+    <dependency>
+      <groupId>com.iontrading.isf</groupId>
+      <artifactId>mapping</artifactId>
+      <version>3.0.4</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hsqldb</groupId>
+      <artifactId>hsqldb</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.iontrading.isf</groupId>
+      <artifactId>ion20-xrs_scroller</artifactId>
+      <version>${ion20.ion20-xrs_scroller.version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <pluginManagement>      <!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.0</version>
+          <configuration>
+            <release>14</release>
+            <compilerArgs>--enable-preview</compilerArgs>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>

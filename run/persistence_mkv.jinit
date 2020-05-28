@@ -1,0 +1,21 @@
+mkv.component=XRS_PERSISTENCE_TEST
+mkv.source=TRADEPROCESSOR
+mkv.currency=ALL
+
+mkv.CSHOST=localhost
+mkv.CSPORT=14000
+mkv.USER=mkv
+mkv.PWD=mkvpwd
+mkv.LISTEN=12123
+
+mkv.debug=1
+
+mkv.DB.NAME=TRADE_PROCESSOR_DB
+mkv.DB.USER=TPDB
+mkv.DB.PASSWORD=TPDB
+mkv.DB.TYPE=HSQLMEM
+
+# Enable auto generation of dbschema
+mkv.db.hbm2ddl.auto=create
+mkv.db.format.sql=true
+mkv.db.show.sql=true
