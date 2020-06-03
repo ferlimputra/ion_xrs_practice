@@ -1,0 +1,11 @@
+mkv.component=TALK_PUBLISHER
+mkv.source=TALK_SOURCE
+mkv.currency=ALL
+
+mkv.CSHOST=localhost
+mkv.CSPORT=14000
+mkv.USER=mkv
+mkv.PWD=mkvpwd
+mkv.LISTEN=12123
+
+mkv.debug=1

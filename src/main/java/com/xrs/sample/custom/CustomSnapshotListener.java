@@ -5,7 +5,6 @@ import com.iontrading.xrs.api.IModuleServiceLocator;
 import com.iontrading.xrs.api.IQuery;
 import com.iontrading.xrs.api.events.IEventFactory;
 import com.iontrading.xrs.api.events.IEventMgr;
-import com.iontrading.xrs.api.events.XRSEventException;
 import com.iontrading.xrs.api.helper.SnapshotModuleHelper;
 
 public class CustomSnapshotListener implements ICustomSnapshotListener {

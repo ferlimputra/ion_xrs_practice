@@ -30,6 +30,7 @@ public class TradeService {
   public AsyncResult<String> processTrade(@TalkParam(name = "TradeId") String tradeId,
       @TalkParam(name = "InstrumentId") String instrumentId, @TalkParam(name = "Qty") double qty,
       @TalkParam(name = "Value") double value, @TalkParam(name = "Verb") String verb) {
+    // @TalkParam(name = "Trade") PersistableTrade trade) {
 
     final AsyncResultPromise<String> asyncResult = AsyncResults.create();
 
@@ -41,13 +42,25 @@ public class TradeService {
     domainTrade.setVerb(verb);
 
     System.out.println("""
-            Adding new Trade:
-            - TradeId: %s
-            - InstrumentId: %s
-            - Qty: %f
-            - Value: %f
-            - Verb: %s
+        Adding new Trade:
+        - TradeId: %s
+        - InstrumentId: %s
+        - Qty: %f
+        - Value: %f
+        - Verb: %s
         """.formatted(tradeId, instrumentId, qty, value, verb));
+
+    // final DomainTrade domainTrade = new TradeMapper().read(trade);
+
+    // System.out.println("""
+    // Adding new Trade:
+    // - TradeId: %s
+    // - InstrumentId: %s
+    // - Qty: %f
+    // - Value: %f
+    // - Verb: %s
+    // """.formatted(domainTrade.getTradeId(), domainTrade.getInstrumentId(), domainTrade.getQty(),
+    // domainTrade.getValue(), domainTrade.getVerb()));
 
     CommitterTransaction transaction = committer.create();
 

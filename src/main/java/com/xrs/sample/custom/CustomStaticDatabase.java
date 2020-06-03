@@ -11,8 +11,6 @@ public class CustomStaticDatabase {
 
   private Map<String, Item> database = new HashMap<>();
   private boolean initialized = false;
-  private IContext context;
-  private ICustomRealTimeListener rtListener;
 
   private Item[] items = new Item[] {new Item("ID_1", "Book", "Book Desc", 100, 10),
       new Item("ID_2", "Pen", "Pen Desc", 10, 200), new Item("ID_3", "Paper", "Paper Desc", 1, 500),
@@ -33,7 +31,6 @@ public class CustomStaticDatabase {
       return;
     }
 
-    this.context = context;
     for (Item item : items) {
       database.put(item.getId(), item);
     }
@@ -63,6 +60,5 @@ public class CustomStaticDatabase {
   }
 
   public void setRTListener(ICustomRealTimeListener l) {
-    rtListener = l;
   }
 }

@@ -1,10 +1,8 @@
 package com.xrs.sample.persistence;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.Table;
 import com.iontrading.isf.committer.spi.AbstractPersistablePublishableEntity;
-import com.iontrading.talk.api.annotation.Identifier;
 import com.iontrading.talk.api.annotation.TalkProperty;
 import com.iontrading.talk.api.annotation.TalkType;
 
@@ -15,8 +13,6 @@ public class PersistableTrade extends AbstractPersistablePublishableEntity {
 
   private static final long serialVersionUID = 5020218447744179422L;
 
-  @Id
-  @Identifier
   @TalkProperty
   private String tradeId;
 

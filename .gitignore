@@ -18,4 +18,4 @@ target/
 *.log
 
 ### ION ###
-run/custom/*
+run/*/*
