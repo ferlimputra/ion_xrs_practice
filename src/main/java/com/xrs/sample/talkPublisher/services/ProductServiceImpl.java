@@ -1,12 +1,12 @@
-package com.xrs.sample.talkPublisher.services;
+package com.xrs.sample.talkpublisher.services;
 
 import javax.inject.Inject;
 import com.iontrading.isf.commons.async.AsyncResult;
 import com.iontrading.isf.commons.async.AsyncResultPromise;
 import com.iontrading.isf.commons.async.AsyncResults;
 import com.iontrading.isf.commons.callback.Callback;
-import com.xrs.sample.talkPublisher.data.ProductDatabase;
-import com.xrs.sample.talkPublisher.domain.Product;
+import com.xrs.sample.talkpublisher.data.ProductDatabase;
+import com.xrs.sample.talkpublisher.domain.Product;
 
 public class ProductServiceImpl implements ProductService {
 

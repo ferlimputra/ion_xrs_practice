@@ -1,4 +1,4 @@
-package com.xrs.sample.talkPublisher.services;
+package com.xrs.sample.talkpublisher.services;
 
 public interface ProductPublisherService {
 

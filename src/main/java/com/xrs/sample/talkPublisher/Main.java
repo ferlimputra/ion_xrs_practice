@@ -1,9 +1,9 @@
-package com.xrs.sample.talkPublisher;
+package com.xrs.sample.talkpublisher;
 
 import java.time.Instant;
 import com.iontrading.isf.applicationserver.spi.AS;
-import com.xrs.sample.talkPublisher.modules.ProductFunctionExporterModule;
-import com.xrs.sample.talkPublisher.modules.ProductPublisherModule;
+import com.xrs.sample.talkpublisher.modules.ProductFunctionExporterModule;
+import com.xrs.sample.talkpublisher.modules.ProductPublisherModule;
 
 public class Main {
   public static void main(String[] args) {

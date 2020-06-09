@@ -1,10 +1,10 @@
-package com.xrs.sample.talkPublisher.modules;
+package com.xrs.sample.talkpublisher.modules;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Singleton;
 import com.iontrading.talk.api.guice.TalkModule;
-import com.xrs.sample.talkPublisher.services.ProductService;
-import com.xrs.sample.talkPublisher.services.ProductServiceImpl;
+import com.xrs.sample.talkpublisher.services.ProductService;
+import com.xrs.sample.talkpublisher.services.ProductServiceImpl;
 
 public class ProductFunctionExporterModule extends AbstractModule {
 

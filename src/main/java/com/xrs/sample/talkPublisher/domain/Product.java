@@ -1,4 +1,4 @@
-package com.xrs.sample.talkPublisher.domain;
+package com.xrs.sample.talkpublisher.domain;
 
 import com.iontrading.talk.api.annotation.Identifier;
 import com.iontrading.talk.api.annotation.TalkProperty;

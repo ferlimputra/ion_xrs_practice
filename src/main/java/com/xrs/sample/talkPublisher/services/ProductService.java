@@ -1,9 +1,9 @@
-package com.xrs.sample.talkPublisher.services;
+package com.xrs.sample.talkpublisher.services;
 
 import com.iontrading.isf.commons.async.AsyncResult;
 import com.iontrading.talk.api.annotation.TalkFunction;
 import com.iontrading.talk.api.annotation.TalkParam;
-import com.xrs.sample.talkPublisher.domain.Product;
+import com.xrs.sample.talkpublisher.domain.Product;
 
 public interface ProductService {
 

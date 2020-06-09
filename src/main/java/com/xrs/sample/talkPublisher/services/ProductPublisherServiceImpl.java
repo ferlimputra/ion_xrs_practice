@@ -1,10 +1,10 @@
-package com.xrs.sample.talkPublisher.services;
+package com.xrs.sample.talkpublisher.services;
 
 import javax.inject.Inject;
 import com.iontrading.talk.api.PublishInfo;
 import com.iontrading.talk.api.Publisher;
-import com.xrs.sample.talkPublisher.data.ProductDatabase;
-import com.xrs.sample.talkPublisher.domain.Product;
+import com.xrs.sample.talkpublisher.data.ProductDatabase;
+import com.xrs.sample.talkpublisher.domain.Product;
 
 public class ProductPublisherServiceImpl implements ProductPublisherService {
 
