@@ -11,7 +11,7 @@ public class CustomBootStrapListener implements BootstrapListener {
 
   @Override
   public void onFailure(Throwable t) {
-    System.out.println("Failed to register component. Message: %s".formatted(t.getMessage()));
+    System.out.println(String.format("Failed to register component. Message: %s", t.getMessage()));
     t.printStackTrace();
   }
 

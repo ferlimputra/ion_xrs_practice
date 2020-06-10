@@ -41,14 +41,14 @@ public class TradeService {
     domainTrade.setValue(value);
     domainTrade.setVerb(verb);
 
-    System.out.println("""
-        Adding new Trade:
-        - TradeId: %s
-        - InstrumentId: %s
-        - Qty: %f
-        - Value: %f
-        - Verb: %s
-        """.formatted(tradeId, instrumentId, qty, value, verb));
+    // System.out.println("""
+    // Adding new Trade:
+    // - TradeId: %s
+    // - InstrumentId: %s
+    // - Qty: %f
+    // - Value: %f
+    // - Verb: %s
+    // """.formatted(tradeId, instrumentId, qty, value, verb));
 
     // final DomainTrade domainTrade = new TradeMapper().read(trade);
 
@@ -74,12 +74,14 @@ public class TradeService {
 
       @Override
       public void onRollback(Collection<? extends DomainEntity> entities, Throwable reason) {
-        System.out.println("Rolling back transaction. Reason: %s".formatted(reason.getMessage()));
+        // System.out.println("Rolling back transaction. Reason:
+        // %s".formatted(reason.getMessage()));
         asyncResult.failure(reason);
       }
 
       @Override
       public void onPending(Collection<? extends DomainEntity> entities) {
+        //
       }
 
       @Override

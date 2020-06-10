@@ -19,7 +19,7 @@ public class ProductPublisherServiceImpl implements ProductPublisherService {
 
     final Product product = ProductDatabase.products.get(0);
     final PublishInfo info = publisher.publish(product);
-    System.out.println("Product published. Id: %s".formatted(info.getFullId()));
+    System.out.println(String.format("Product published. Id: %s", info.getFullId()));
   }
 
   @Override
@@ -28,8 +28,8 @@ public class ProductPublisherServiceImpl implements ProductPublisherService {
       throw new IllegalStateException("Product list is empty");
     }
 
-    final PublishInfo info =
+    PublishInfo info =
         publisher.publishToList(Product.class, ProductDatabase.products, "Product_Chain");
-    System.out.println("Product list published. Chain Id: %s".formatted(info.getFullId()));
+    System.out.println(String.format("Product list published. Chain Id: %s", info.getFullId()));
   }
 }

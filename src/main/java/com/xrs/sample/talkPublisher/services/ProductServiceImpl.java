@@ -27,19 +27,19 @@ public class ProductServiceImpl implements ProductService {
 
       @Override
       public void onFailure(Throwable exception) {
-        System.out.println("AddProduct failed. Reason: %s".formatted(exception.getMessage()));
+        System.out.println(String.format("AddProduct failed. Reason: %s", exception.getMessage()));
       }
     });
 
     try {
       ProductDatabase.products.add(product);
-      asyncResult.success("""
-            New Product added:
-            - Id: %s
-            - Name: %s
-            - Price: %f
-            - Qty: %d
-          """.formatted(product.getId(), product.getName(), product.getPrice(), product.getQty()));
+      // asyncResult.success("""
+      // New Product added:
+      // - Id: %s
+      // - Name: %s
+      // - Price: %f
+      // - Qty: %d
+      // """.formatted(product.getId(), product.getName(), product.getPrice(), product.getQty()));
     } catch (Exception e) {
       asyncResult.failure(e);
     }

@@ -26,7 +26,7 @@ public class CustomSnapshotModule implements ISnapshotModule {
 
   @Override
   public void init(IContext context, IModuleServiceLocator locator) {
-    System.out.println("Initializing %s".formatted(MODULE_NAME));
+    System.out.println(String.format("Initializing %s", MODULE_NAME));
 
     this.context = context;
     this.locator = locator;
@@ -35,7 +35,7 @@ public class CustomSnapshotModule implements ISnapshotModule {
     this.db = CustomStaticDatabase.getInstance();
     db.init(context, locator.getConfig().getXRSSource());
 
-    this.status = new ModuleStatus(XRSStatus.RUNNING, "%s running".formatted(MODULE_NAME));
+    this.status = new ModuleStatus(XRSStatus.RUNNING, String.format("%s running", MODULE_NAME));
 
     try {
       final IEventMgr evtMgr = locator.getEvtManager();
@@ -70,7 +70,7 @@ public class CustomSnapshotModule implements ISnapshotModule {
   @Override
   public XRSGenericResult prepareQuery(final IQuery query) {
     if (!status.getStatus().equals(XRSStatus.RUNNING)) {
-      return XRSGenericResult.error("%s is not running".formatted(MODULE_NAME));
+      return XRSGenericResult.error(String.format("%s is not running", MODULE_NAME));
     }
     return XRSGenericResult.ok();
   }

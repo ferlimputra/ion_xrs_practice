@@ -36,12 +36,12 @@ public class CustomStructureModule implements IStructureModule {
     fields.add(new DefaultXRSField("Qty", MkvFieldType.INT));
     fields.add(new DefaultXRSField("Added", MkvFieldType.DATE));
 
-    updateStatus(XRSStatus.RUNNING, "Fields count: %d".formatted(fields.size()));
+    updateStatus(XRSStatus.RUNNING, String.format("Fields count: %d", fields.size()));
   }
 
   @Override
   public void shutDown() {
-    updateStatus(XRSStatus.DISCONNECTED, "%s Shutting down".formatted(MODULE_NAME));
+    updateStatus(XRSStatus.DISCONNECTED, String.format("%s Shutting down", MODULE_NAME));
   }
 
   @Override
@@ -56,7 +56,7 @@ public class CustomStructureModule implements IStructureModule {
 
   @Override
   public String getDetails() {
-    return "%s Details".formatted(MODULE_NAME);
+    return String.format("%s Details", MODULE_NAME);
   }
 
   @Override

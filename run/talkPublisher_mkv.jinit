@@ -9,3 +9,15 @@ mkv.PWD=mkvpwd
 mkv.LISTEN=12123
 
 mkv.debug=1
+
+mkv.db.name=ION_TEST_DB
+mkv.db.host=localhost
+mkv.db.port=1436
+mkv.db.user=SA
+mkv.db.password=masterkey
+mkv.db.type=SQLJDBC4
+
+# Enable auto generation of dbschema
+mkv.db.hbm2ddl.auto=create
+mkv.db.format.sql=true
+mkv.db.show.sql=true

@@ -36,12 +36,12 @@ public class CustomRealTimeModule implements IRealTimeModule, ICustomRealTimeLis
 
   @Override
   public ModuleStatus getModuleStatus() {
-    return new ModuleStatus(XRSStatus.RUNNING, "%s running".formatted(MODULE_NAME));
+    return new ModuleStatus(XRSStatus.RUNNING, String.format("%s running", MODULE_NAME));
   }
 
   @Override
   public String getDetails() {
-    return "%s details".formatted(MODULE_NAME);
+    return String.format("%s details", MODULE_NAME);
   }
 
   @Override
