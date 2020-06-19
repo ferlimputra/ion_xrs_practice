@@ -80,6 +80,12 @@
       <artifactId>ion20-xrs_scroller</artifactId>
       <version>${ion20.ion20-xrs_scroller.version}</version>
     </dependency>
+    <dependency>
+      <groupId>com.microsoft.sqlserver</groupId>
+      <artifactId>mssql-jdbc</artifactId>
+      <version>8.2.2.jre8</version>
+    </dependency>
+
   </dependencies>
 
   <build>

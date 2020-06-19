@@ -1,7 +1,12 @@
 package com.xrs.sample.talkpublisher.domain;
 
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import com.iontrading.isf.committer.spi.AbstractPersistablePublishableEntity;
 import com.iontrading.isf.committer.spi.DomainEntity;
 import com.iontrading.isf.committer.spi.RevisionIdentifier;
@@ -12,8 +17,10 @@ import com.iontrading.talk.api.annotation.TalkType;
 @Table(name = "BOOK")
 @TalkType(name = "Book")
 public class Book extends AbstractPersistablePublishableEntity implements DomainEntity {
-
   private static final long serialVersionUID = 1L;
+
+  @Transient
+  private transient RevisionIdentifier revId;
 
   @TalkProperty
   private String bookId;
@@ -70,21 +77,20 @@ public class Book extends AbstractPersistablePublishableEntity implements Domain
   }
 
   @Override
+  @Transient
   public RevisionIdentifier getIdentifier() {
-    // TODO Auto-generated method stub
-    return null;
+    return revId;
   }
 
   @Override
   public void setIdentifier(RevisionIdentifier newId) {
-    // TODO Auto-generated method stub
-
+    this.revId = newId;
   }
 
   @Override
+  @Transient
   public RevisionIdentifier getPreviousIdentifier() {
-    // TODO Auto-generated method stub
-    return null;
+    return revId;
   }
 
 }
